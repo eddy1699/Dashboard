@@ -1,0 +1,818 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+  }
+  body{
+    background: #EEF6F9;
+    width: 100%;
+    height: 100%;
+    background-attachment:fixed; }
+  .wrapper{
+    margin: 10px;
+  }
+  .wrapper .top_navbar{
+    width: calc(100% - 20px);
+    height: 60px;
+    display: flex;
+    position: fixed;
+    top: 10px;
+  }
+  
+  .wrapper .top_navbar .hamburger{
+    width: 70px;
+    height: 100%;
+    background: #1E89E7;
+    padding: 15px 17px;
+    cursor: pointer;
+  }
+  
+  .wrapper .top_navbar .hamburger div{
+    width: 35px;
+    height: 4px;
+    background: #fff;
+    margin: 5px 0;
+    margin-left: 5px;
+    border-radius: 5px;
+  }
+  
+  .wrapper .top_navbar .top_menu{
+    width: calc(100% - 70px);
+    height: 100%;
+    background: #1E89E7;
+    border-top-right-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 0 20px;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1); */
+  }
+  
+  .wrapper .top_navbar .top_menu .logo{
+    color: #1E89E7;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 3px;
+  }
+  
+  .wrapper .top_navbar .top_menu ul{
+    display: flex;
+  }
+  
+  .wrapper .top_navbar .top_menu ul li a{
+    display: block;
+    margin: 0 10px;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    border: 1px solid #FFF;
+    border-radius: 50%;
+    color: #fff;
+  }
+  
+  .wrapper .top_navbar .top_menu ul li a:hover{
+    background: #4360b5;
+    color: #fff;
+  }
+  
+  .wrapper .top_navbar .top_menu ul li a:hover i{
+    color: #fff;
+  }
+  
+  .wrapper .sidebar{
+    position: fixed;
+    top: 70px;
+    left: 10px;
+    background: #fff;
+    width: 220px;
+    height: calc(100% - 80px);
+    border-bottom-left-radius: 20px;
+    transition: all 0.2s ease;
+    color: #1E89E7;
+  }
+  
+  .wrapper .sidebar ul li a{
+      display: block;
+      padding: 20px;
+      color: #fff;
+      position: relative;
+      margin-bottom: 1px;
+      color: #fff;
+      white-space: nowrap;
+      
+    transition: all 0.2s ease;
+  }
+  
+  .wrapper .sidebar ul li a:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background: #92a6e2;
+    display: none;
+  }
+  
+  .wrapper .sidebar ul li a span.icon{
+    margin-right: 10px;
+    display: inline-block;
+  }
+  
+  .wrapper .sidebar ul li a span.title{
+    display: inline-block;
+  }
+  
+  .wrapper .sidebar ul li a:hover,
+  .wrapper .sidebar ul li a.active{
+    background: #1E89E7;
+    color: #fff;
+  } 
+/*   
+  .wrapper .sidebar ul li a:hover:before,
+  .wrapper .sidebar ul li a.active:before{
+    display: block;
+  } */
+  
+  .wrapper .main_container{
+    width: (100% - 200px);
+    margin-top: 70px;
+    margin-left: 230px;
+    padding: 15px;
+    transition: all 0.2s ease;
+  }
+  
+  .wrapper .main_container .item{
+    background: #fff;
+    margin-bottom: 10px;
+    padding: 15px;
+    font-size: 14px;
+    line-height: 22px;
+    width: (100% - 200px);
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.185) ;
+  
+    
+  }
+  
+  .wrapper.collapse .sidebar{
+    width:0px;
+  }
+  
+  /* .wrapper.collapse .sidebar ul li a{
+
+  } */
+  
+  .wrapper.collapse .sidebar ul li a span.icon{
+   display: none;
+  }
+  
+  .wrapper.collapse .sidebar ul li a span.title{
+    display: none;
+  }
+  
+  .wrapper.collapse .main_container{
+    width: (100% - 70px);
+    margin-left: 0px;
+  }
+  .logo{
+    width: auto;
+    height: 100%;
+    background: #1E89E7;
+    padding: 0;
+    border-top-left-radius: 20px;
+    cursor: pointer;
+  }
+
+  .logo div{
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 5px;
+  }
+  .sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+
+
+
+  .column {
+    float: right;
+    width: 450px;
+  }
+  .column2 {
+    width: 900px;
+    float: right;
+  }
+  .column3 {
+    width: 600px;
+    float: right;
+  }
+  
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Remove extra left and right margins, due to padding in columns */
+  .row {margin: 0 -5px;}
+  
+  /* Clear floats after the columns */
+
+  
+  /* Style the counter cards */
+  .card1 {
+    background: #fff;
+    margin-bottom: 10px;
+    padding: 15px;
+    font-size: 14px;
+    line-height: 22px;
+    width:(100% - 300px);
+    border-radius: 10px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+    margin-right: 30px;
+   
+  text-align: center;
+  }
+  .card2 {
+    background: #fff;
+    margin-bottom: 10px;
+    padding: 15px;
+    font-size: 14px;
+    line-height: 22px;
+    
+    width:(100% - 600px);
+    border-radius: 10px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+    margin-right: 30px;
+   
+  text-align: center;
+  }
+
+  /* Responsive columns - one column layout (vertical) on small screens */
+  @media screen and (max-width: 750px) {
+    .column {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+    .panel{
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+
+
+
+  .panel {
+    width: 750px;
+    height: 400px;
+    background: #838CC7;
+    box-shadow: 1px 2px 3px 0px rgba(0,0,0,0.10);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  
+  .panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    height: 60px;
+    background: #fff;
+  }
+  
+  .title {
+    color: #5E6977;
+    font-weight: 500;
+  }
+  
+  .calendar-views span {
+    font-size: 14px;
+    font-weight: 300;
+    color: #BDC6CF;
+    padding: 6px 14px;
+    border: 2px solid transparent;
+  }
+  .calendar-views span:hover {
+    border: 2px solid #BDC6CF;
+    cursor: pointer;
+    border-radius: 15px;
+  }
+  
+  .panel-body {
+    display: flex;
+    height: 340px;
+  }
+  
+  .categories {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-basis: 25%;
+    padding: 39px 0px 41px 26px;
+  }
+  .category {
+    display: flex;
+    flex-direction: column;
+  }
+  .category span:first-child {
+    font-weight: 300;
+    font-size: 14px;
+    opacity: 0.6;
+    color: #fff;
+    margin-bottom: 6px;
+  }
+  .category span:last-child {
+    font-size: 32px;
+    font-weight: 300;
+    color: #fff;
+  }
+  
+  .chart {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 2;
+    position: relative;
+  }
+  
+  .operating-systems {
+    display: flex;
+    width: auto;
+    margin-top: 30px;
+    margin-bottom: 50px;
+  }
+  span[class*="-os"] {
+    font-size: 14px;
+    font-weight: 300;
+    font-size: 14px;
+    color: #c3c6e4;
+
+  }
+  span[class*="-os"] span {
+    width: 9px;
+    height: 9px;
+    display: inline-block;
+    border-radius: 50%;
+    margin-right: 200px;
+  }
+  .android-os span {
+    background: #80B354;
+  }
+  .ios-os span {
+    background: rgb(226, 133, 26);
+  }
+  .windows-os span {
+    background: rgb(248, 230, 28);
+  }
+  
+  div[class*="-stats"] {
+    position: absolute;
+    color: #fff;
+    font-size: 12px;
+    display: flex;
+    opacity: 0;
+    animation: showstats 0.6s linear 1.8s;
+    animation-fill-mode: forwards;
+  }
+  
+  div[class*="-stats"] span {
+    height: 12px;
+    width: 12px;
+    margin: 0 7px;
+    background-color: #fff;
+    border: 2px solid transparent;
+    border-radius: 50%;
+  }
+  
+  div[class*="-stats"] span:hover {
+    transform: scale(1.4) rotate(0.02deg);
+    border: 2px solid #fff;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .android-stats {
+    bottom: 155px;
+    right: 230px;
+  }
+  .android-stats span:hover {
+    background: #80B354;
+  }
+  
+  .ios-stats {
+    bottom: 83px;
+    left: 133px;
+  }
+  .ios-stats span:hover {
+    background: #F5A623;
+  }
+  
+  .windows-stats {
+    bottom: 133px;
+    right: 62px;
+  }
+  .windows-stats span:hover {
+    background: #F8E71C;
+  }
+  
+  .dataset-1 {
+    animation: raise .8s linear 1;
+    transform-origin: bottom;
+  }
+  .dataset-2 {
+    animation: raise 1.6s linear 1;
+    transform-origin: bottom;
+  }
+  .dataset-3 {
+    animation: raise 1.8s linear 1;
+    transform-origin: bottom;
+  }
+  
+  .lines {
+    opacity: 0;
+    animation: showlines 0.6s linear 1.6s;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes showlines {
+    to { opacity: 0.2; }
+  }
+  
+  @keyframes showstats {
+    to { opacity: 1; }
+  }
+  
+  @keyframes raise {
+    0% { transform: scaleY(0.01); }
+    75% { transform: scaleY(1.1); }
+    100% { transform: scaleY(1); }
+  }
+  
+
+
+
+
+
+
+
+
+
+
+  .flex-wrapper {
+    display: flex;
+    flex-flow: row nowrap;
+  }
+  
+  .single-chart {
+    width: 33%;
+    justify-content: space-around ;
+  }
+  .single-chart2 {
+    width: 50%;
+    justify-content: space-around ;
+  }
+  
+  .circular-chart {
+    display: block;
+    margin: 10px auto;
+    max-width: auto;
+    max-height: 250px;
+  }
+  
+  .circle-bg {
+    fill: none;
+    stroke: #eee;
+    stroke-width: 3.8;
+  }
+  
+  .circle {
+    fill: none;
+    stroke-width: 2.8;
+    stroke-linecap: round;
+    animation: progress 1s ease-out forwards;
+  }
+  
+  @keyframes progress {
+    0% {
+      stroke-dasharray: 0 100;
+    }
+  }
+  
+  .circular-chart.orange .circle {
+    stroke: #ff9f00;
+  }
+  
+  .circular-chart.green .circle {
+    stroke: #4CC790;
+  }
+  
+  .circular-chart.blue .circle {
+    stroke: #3c9ee5;
+  }
+  
+  .percentage {
+    fill: #666;
+    font-family: sans-serif;
+    font-size: 0.5em;
+    text-anchor: middle;
+  }
+
+  @import url('https://fonts.googleapis.com/css?family=Krub:400,700');
+  
+.card {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 250px;
+  height: 400px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px 5px rgba(0, 0, 0, 0.2);
+  background: #151515;
+  overflow: hidden;
+}
+.card .ds-top {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 300px;
+  height: 80px;
+  background: crimson;
+  animation: dsTop 1.5s;
+}
+.card .avatar-holder {
+  position: absolute;
+  margin: auto;
+  top: 40px;
+  right: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 5px #151515, inset 0 0 0 5px #000000, inset 0 0 0 5px #000000, inset 0 0 0 5px #000000, inset 0 0 0 5px #000000;
+  background: white;
+  overflow: hidden;
+  animation: mvTop 1.5s;
+}
+.card .avatar-holder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card .name {
+  position: absolute;
+  margin: auto;
+  top: -60px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: inherit;
+  height: 40px;
+  text-align: center;
+  animation: fadeIn 2s ease-in;
+}
+.card .name a {
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 18px;
+}
+.card .name a:hover {
+  text-decoration: underline;
+  color: crimson;
+}
+.card .name h6 {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: white;
+  width: 40px;
+}
+.card .button {
+  position: absolute;
+  margin: auto;
+  padding: 8px;
+  top: 20px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: inherit;
+  height: 40px;
+  text-align: center;
+  animation: fadeIn 2s ease-in;
+  outline: none;
+}
+.card .button a {
+  padding: 5px 20px;
+  border-radius: 10px;
+  color: white;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  font-size: 10px;
+  transition: all 1s;
+}
+.card .button a:hover {
+  color: white;
+  background: crimson;
+}
+.card .ds-info {
+  position: absolute;
+  margin: auto;
+  top: 120px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: inherit;
+  height: 40px;
+  display: flex;
+}
+.card .ds-info .pens, .card .ds-info .projects, .card .ds-info .posts {
+  position: relative;
+  left: -300px;
+  width: calc(250px / 3);
+  text-align: center;
+  color: white;
+  animation: fadeInMove 2s;
+  animation-fill-mode: forwards;
+}
+.card .ds-info .pens h6, .card .ds-info .projects h6, .card .ds-info .posts h6 {
+  text-transform: uppercase;
+  color: crimson;
+}
+.card .ds-info .pens p, .card .ds-info .projects p, .card .ds-info .posts p {
+  font-size: 12px;
+}
+.card .ds-info .ds:nth-of-type(2) {
+  animation-delay: .5s;
+}
+.card .ds-info .ds:nth-of-type(1) {
+  animation-delay: 1s;
+}
+.card .ds-skill {
+  position: absolute;
+  margin: auto;
+  bottom: 10px;
+  right: 0;
+  left: 0;
+  width: 200px;
+  height: 100px;
+  animation: mvBottom 1.5s;
+}
+.card .ds-skill h6 {
+  margin-bottom: 5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: crimson;
+}
+.card .ds-skill .skill h6 {
+  font-weight: 400;
+  font-size: 8px;
+  letter-spacing: 0.05em;
+  margin: 4px 0;
+  color: white;
+}
+.card .ds-skill .skill .fab {
+  color: crimson;
+  font-size: 14px;
+}
+.card .ds-skill .skill .bar {
+  height: 5px;
+  background: crimson;
+  text-align: right;
+}
+.card .ds-skill .skill .bar p {
+  color: white;
+  font-size: 8px;
+  padding-top: 5px;
+  animation: fadeIn 5s;
+}
+.card .ds-skill .skill .bar:hover {
+  background: white;
+}
+.card .ds-skill .skill .bar-html {
+  width: 95%;
+  animation: htmlSkill 1s;
+  animation-delay: .4s;
+}
+.card .ds-skill .skill .bar-css {
+  width: 90%;
+  animation: cssSkill 2s;
+  animation-delay: .4s;
+}
+.card .ds-skill .skill .bar-js {
+  width: 75%;
+  animation: jsSkill 3s;
+  animation-delay: .4s;
+}
+
+@keyframes fadeInMove {
+  0% {
+    opacity: 0;
+    left: -300px;
+  }
+  100% {
+    opacity: 1;
+    left: 0;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes htmlSkill {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 95%;
+  }
+}
+@keyframes cssSkill {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 90%;
+  }
+}
+@keyframes jsSkill {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 75%;
+  }
+}
+@keyframes mvBottom {
+  0% {
+    bottom: -150px;
+  }
+  100% {
+    bottom: 10px;
+  }
+}
+@keyframes mvTop {
+  0% {
+    top: -150px;
+  }
+  100% {
+    top: 40px;
+  }
+}
+@keyframes dsTop {
+  0% {
+    top: -150px;
+  }
+  100% {
+    top: 0;
+  }
+}
+.following {
+  color: white;
+  background: crimson;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
